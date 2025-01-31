@@ -265,14 +265,21 @@ def create_animation_function(
 
 
 def main():
+    # glut.glutInit()
+    # glut.glutInitDisplayMode(glut.GLUT_DOUBLE | glut.GLUT_RGBA)
+    # glut.glutInitWindowSize(800, 600)
+    # glut.glutCreateWindow(b"Fish Scanner")
+    
     scanner = SimpleScanner()
 
-    gl.glClearColor(0.1, 0.1, 0.2, 1.0)
+    
     timer_msec = int(1000 / 60) # 60 times per second
+    
     renderer = Renderer()
+    gl.glClearColor(0.1, 0.1, 0.2, 1.0)
     drawings_list = []
     fish_queue = Queue() # Queue to maintain order of the fish and kill the oldest ones
-    fish_limit = 10 # Maximum amount of fish to draw
+    fish_limit = 65535 # Maximum amount of fish to draw
     scanned_fish_queue = Queue()
     draw_ocean(drawings_list)
 

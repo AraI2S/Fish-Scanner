@@ -11,8 +11,9 @@ class SimpleScanner:
         """
         Initialize AR markers detector
         """
-        self._aruco_dict = cv2.aruco.Dictionary_get(cv2.aruco.DICT_4X4_50)
-        self._aruco_params = cv2.aruco.DetectorParameters_create()
+        self._aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_4X4_50)
+        self._aruco_params = cv2.aruco.DetectorParameters()
+
 
         self._marker_top_left_id = 3
         self._marker_top_right_id = 1

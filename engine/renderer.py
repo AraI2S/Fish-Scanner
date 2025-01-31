@@ -21,8 +21,9 @@ class Renderer:
         """
         glut.glutInit(sys.argv)
         glut.glutInitDisplayMode(glut.GLUT_DOUBLE | glut.GLUT_RGBA | glut.GLUT_DEPTH)
-        glut.glutCreateWindow("OpenGL")
+        glut.glutCreateWindow(b"OpenGL")
         glut.glutFullScreen()
+
 
         gl.glEnable(gl.GL_TEXTURE_2D)
         gl.glDisable(gl.GL_LIGHTING)
